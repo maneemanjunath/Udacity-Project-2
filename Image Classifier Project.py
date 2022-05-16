@@ -69,15 +69,7 @@ data_transforms = transforms.Compose([transforms.RandomRotation(30),transforms.R
 
 transforms.Normalize(mean = [0.485, 0.456, 0.406],std = [0.229, 0.224, 0.225])])
 
-# TODO: Load the datasets with ImageFolder
-train_datasets = datasets.ImageFolder(data_dir + '/train', transform=data_transforms)
-valid_datasets = datasets.ImageFolder(data_dir + '/valid', transform=data_transforms)
-test_datasets = datasets.ImageFolder(data_dir + '/test', transform=data_transforms)
 
-# TODO: Using the image datasets and the trainforms, define the dataloaders
-trainloaders = torch.utils.data.DataLoader(train_datasets, batch_size=64, shuffle=True)
-validloaders = torch.utils.data.DataLoader(valid_datasets, batch_size=64, shuffle=True)
-testloaders = torch.utils.data.DataLoader(test_datasets, batch_size=64, shuffle=True)
 
 data_transforms = {
     'train': transforms.Compose([
